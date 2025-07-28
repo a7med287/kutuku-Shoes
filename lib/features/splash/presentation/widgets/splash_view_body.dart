@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
-class SplashViewBody extends StatelessWidget{
+import 'package:kutuku/features/splash/presentation/widgets/text_with_animation.dart';
+
+class SplashViewBody extends StatelessWidget {
   const SplashViewBody({super.key});
 
   @override
@@ -7,19 +9,21 @@ class SplashViewBody extends StatelessWidget{
     return Center(
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
-        children: [
-          Text("Kutuku",style: TextStyle(
-            fontSize: 52,
-            fontFamily: "PublicaPlay",
-            fontWeight: FontWeight.bold,
-            color: Colors.white
-          ),),
-          Text("Any shopping just from home",style: TextStyle(
-                 fontSize: 18,
-              color: Colors.white
-          ),)
+        children: const [
+           Text(
+            "Kutuku",
+            style: TextStyle(
+              fontSize: 52,
+              fontFamily: "PublicaPlay",
+              fontWeight: FontWeight.bold,
+              color: Colors.white,
+            ),
+          ),
+           TextWithAnimation(),
         ],
       ),
     );
   }
 }
+
+
