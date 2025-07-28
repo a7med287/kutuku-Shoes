@@ -19,11 +19,12 @@ class SplashViewBody extends StatelessWidget {
               color: Colors.white,
             ),
           ),
+           SizedBox(
+             height: 10,
+           ),
            TextWithAnimation(),
         ],
       ),
     );
   }
 }
-
-
