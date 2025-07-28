@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'features/splash/presentation/splash_view.dart';
 
 void main() {
   runApp(const KutukuApp());
@@ -9,6 +11,9 @@ class KutukuApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(home: Scaffold(body: Center(child: Text("Hello"))));
+    return GetMaterialApp(
+      debugShowCheckedModeBanner: false,
+        home: const SplashView()
+    );
   }
 }
