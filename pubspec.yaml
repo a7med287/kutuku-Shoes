@@ -83,6 +83,9 @@ flutter:
     - family: AirbnbCereal_W_Md
       fonts:
         - asset: assets/fonts/AirbnbCereal_W_Md.otf
+    - family: AirbnbCereal_W_Bk
+      fonts:
+        - asset: assets/fonts/AirbnbCereal_W_Bk.otf
   #       - asset: fonts/Schyler-Italic.ttf
   #         style: italic
   #   - family: Trajan Pro

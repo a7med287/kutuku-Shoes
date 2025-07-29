@@ -19,7 +19,12 @@ class TextWithAnimation extends StatelessWidget {
         ],
         isRepeatingAnimation: false,
         onFinished: () {
-          Get.to(()=> OnBoardingView(),transition: Transition.fade);
+          Get.to(
+            () => OnBoardingView(),
+            transition: Transition.fade,
+            duration: Duration(milliseconds: 200),
+            curve: Curves.easeIn,
+          );
         },
       ),
     );

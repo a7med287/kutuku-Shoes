@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:kutuku/core/utiles/size_config.dart';
+import 'package:kutuku/features/Auth/presentation/views/Login/login_view.dart';
 import '../../../../../core/widgets/custom_button.dart';
 import 'custom_dots_indicator.dart';
 import 'custom_page_view.dart';
@@ -28,11 +30,11 @@ class _OnBoardingViewBodyState extends State<OnBoardingViewBody> {
     return Padding(
       padding: const EdgeInsets.only(left: 20.0),
       child: Stack(
-        children:  [
+        children: [
           Positioned(
             top: 0,
             right: 0,
-            child:  Image.asset(
+            child: Image.asset(
               "assets/images/img.png",
               height: SizeConfig.defaultSize! * 23,
             ),
@@ -57,19 +59,24 @@ class _OnBoardingViewBodyState extends State<OnBoardingViewBody> {
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                 CustomDotsIndicator(
+                CustomDotsIndicator(
                   indexDot:
                       pageController!.hasClients
                           ? pageController!.page!.round()
                           : 0,
                 ),
                 const Expanded(child: SizedBox()),
-                 Padding(
+                Padding(
                   padding: const EdgeInsets.only(right: 20.0),
                   child: CustomButton(
                     onTap: () {
                       pageController!.page == 2
-                          ? debugPrint("get started")
+                          ? Get.to(
+                            () => LoginView(),
+                            transition: Transition.rightToLeft,
+                            duration: Duration(milliseconds: 200),
+                            curve: Curves.easeIn,
+                          )
                           : pageController!.nextPage(
                             duration: Duration(milliseconds: 200),
                             curve: Curves.easeIn,
