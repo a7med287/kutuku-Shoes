@@ -3,6 +3,7 @@ import 'package:kutuku/core/utiles/size_config.dart';
 import 'package:kutuku/features/on_boarding/presentation/views/widgets/text_section.dart';
 
 import '../../../../../core/widgets/custom_button.dart';
+import 'nike_custom_text.dart';
 
 class OnBoardingViewBody extends StatelessWidget {
   const OnBoardingViewBody({super.key});
@@ -13,6 +14,28 @@ class OnBoardingViewBody extends StatelessWidget {
       padding: const EdgeInsets.symmetric(horizontal: 16.0),
       child: Stack(
         children: [
+          Positioned(
+            top: 0,
+            right: 0,
+            child: Image.asset(
+              "assets/images/img.png",
+              height: SizeConfig.defaultSize! * 23,
+            ),
+          ),
+          Positioned(
+            top: SizeConfig.defaultSize! * 16,
+            child: Opacity(
+              opacity: .1,
+              child: NikeCustomText(),
+            ),
+          ),
+          Positioned(
+            top: SizeConfig.defaultSize! * 16,
+            child: Image.asset(
+              "assets/images/on_boarding1.png",
+              height: SizeConfig.defaultSize! * 44,
+            ),
+          ),
           Positioned(
             bottom: SizeConfig.defaultSize! * 16,
             child: TextSectionOnBoarding(),
@@ -26,7 +49,7 @@ class OnBoardingViewBody extends StatelessWidget {
               children: [
                 Text("..........."),
                 Expanded(child: SizedBox()),
-                CustomButton()
+                CustomButton(),
               ],
             ),
           ),
@@ -35,4 +58,3 @@ class OnBoardingViewBody extends StatelessWidget {
     );
   }
 }
-
