@@ -1,13 +1,21 @@
 import 'package:flutter/material.dart';
 
-class TextSectionOnBoarding extends StatelessWidget {
-  const TextSectionOnBoarding({super.key});
+import '../../../../../core/utiles/size_config.dart';
 
+class CustomOnBoardingItem extends StatelessWidget {
+  const CustomOnBoardingItem({super.key, required this.imagePath});
+
+  final String imagePath;
   @override
   Widget build(BuildContext context) {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
+        SizedBox(height: 120,),
+        Image.asset(
+          imagePath,
+          height: SizeConfig.defaultSize! * 42,
+        ),
         Text(
           "Start Journey",
           style: TextStyle(
