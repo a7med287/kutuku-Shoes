@@ -79,6 +79,9 @@ flutter:
     - family: PublicaPlay
       fonts:
         - asset: assets/fonts/FaceType - PublicaPlay-Regular.otf
+    - family: AirbnbCereal_W_Md
+      fonts:
+        - asset: assets/fonts/AirbnbCereal_W_Md.otf
   #       - asset: fonts/Schyler-Italic.ttf
   #         style: italic
   #   - family: Trajan Pro

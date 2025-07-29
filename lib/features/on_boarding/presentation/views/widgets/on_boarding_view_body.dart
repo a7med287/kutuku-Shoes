@@ -1,14 +1,38 @@
 import 'package:flutter/material.dart';
+import 'package:kutuku/core/utiles/size_config.dart';
+import 'package:kutuku/features/on_boarding/presentation/views/widgets/text_section.dart';
 
-class OnBoardingViewBody extends StatelessWidget{
+import '../../../../../core/widgets/custom_button.dart';
+
+class OnBoardingViewBody extends StatelessWidget {
   const OnBoardingViewBody({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return Stack(
-      children: [
-
-      ],
+    return Padding(
+      padding: const EdgeInsets.symmetric(horizontal: 16.0),
+      child: Stack(
+        children: [
+          Positioned(
+            bottom: SizeConfig.defaultSize! * 16,
+            child: TextSectionOnBoarding(),
+          ),
+          Positioned(
+            bottom: SizeConfig.defaultSize! * 5,
+            left: 0,
+            right: 0,
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                Text("..........."),
+                Expanded(child: SizedBox()),
+                CustomButton()
+              ],
+            ),
+          ),
+        ],
+      ),
     );
   }
 }
+
