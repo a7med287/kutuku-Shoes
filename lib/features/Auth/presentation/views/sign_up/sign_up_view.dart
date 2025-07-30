@@ -1,17 +1,15 @@
 import 'package:flutter/material.dart';
-import 'package:get/get.dart';
 import 'package:kutuku/core/utiles/size_config.dart';
 import 'package:kutuku/core/widgets/custom_button.dart';
 import 'package:kutuku/core/widgets/space_widget.dart';
-import 'package:kutuku/features/Auth/presentation/views/sign_up/sign_up_view.dart';
 import 'package:kutuku/features/Auth/presentation/views/widgets/custom_text_field.dart';
 import '../../../../../core/widgets/custom_bach_icon.dart';
 import '../../../../../core/widgets/custom_button_with_icon.dart';
 import '../widgets/custom_password_text_field.dart';
 import '../widgets/text_section.dart';
 
-class LoginView extends StatelessWidget {
-  const LoginView({super.key});
+class SignUpView extends StatelessWidget {
+  const SignUpView({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -32,16 +30,23 @@ class LoginViewBody extends StatelessWidget {
           children: [
             VerticalSpace(value: 1),
             CustomBackIcon(),
-            VerticalSpace(value: 4),
-            TextSection(title: 'Hello Again!', subTitle: 'Welcome Back You’ve Been Missed!',),
-            VerticalSpace(value: 6),
+            VerticalSpace(value: 2),
+            TextSection(title: 'Create Account', subTitle: 'Let’s Create Account Together',),
+            VerticalSpace(value: 3),
+            Text(
+              "Your Name",
+              style: TextStyle(fontSize: 16, fontWeight: FontWeight.w500),
+            ),
+            VerticalSpace(value: 1),
+            CustomTextField(hintText: 'Name',),
+            VerticalSpace(value: 3),
             Text(
               "Email Address",
               style: TextStyle(fontSize: 16, fontWeight: FontWeight.w500),
             ),
             VerticalSpace(value: 1),
             CustomTextField(hintText: 'Email',),
-            VerticalSpace(value: 4),
+            VerticalSpace(value: 3),
             Text(
               "Password",
               style: TextStyle(fontSize: 16, fontWeight: FontWeight.w500),
@@ -64,15 +69,15 @@ class LoginViewBody extends StatelessWidget {
               ],
             ),
             VerticalSpace(value: 3),
-            CustomButton(text: "Sign In", width: SizeConfig.screenWidth!),
+            CustomButton(text: "Login", width: SizeConfig.screenWidth!),
             VerticalSpace(value: 3),
             CustomButtonWithIcon(),
-            VerticalSpace(value: 8),
+            VerticalSpace(value: 5),
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 Text(
-                  "Don’t Have An Account?",
+                  "Already have an account?",
                   style: TextStyle(
                     color: Color(0xff707B81),
                     fontSize: 14,
@@ -82,10 +87,10 @@ class LoginViewBody extends StatelessWidget {
                 ),
                 GestureDetector(
                   onTap: (){
-                    Get.to(()=> SignUpView());
+                    Navigator.pop(context);
                   },
                   child: Text(
-                    " Sign Up for free",
+                    " Sign in",
                     style: TextStyle(fontSize: 15, fontWeight: FontWeight.w500),
                   ),
                 ),

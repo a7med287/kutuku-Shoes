@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 class TextSection extends StatelessWidget{
-  const TextSection({super.key});
+  const TextSection({super.key, required this.title, required this.subTitle});
 
+  final String title, subTitle;
   @override
   Widget build(BuildContext context) {
     return Column(
@@ -10,7 +11,7 @@ class TextSection extends StatelessWidget{
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Text(
-              "Hello Again!",
+              title,
               style: TextStyle(fontSize: 28, fontWeight: FontWeight.w500),
             ),
           ],
@@ -19,7 +20,7 @@ class TextSection extends StatelessWidget{
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Text(
-              "Welcome Back You’ve Been Missed!",
+             subTitle,
               style: TextStyle(
                 color: Color(0xff707B81),
                 fontSize: 16,
