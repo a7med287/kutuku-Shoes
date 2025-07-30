@@ -6,6 +6,7 @@ import 'package:kutuku/core/widgets/space_widget.dart';
 import 'package:kutuku/features/Auth/presentation/views/recovery_password.dart';
 import 'package:kutuku/features/Auth/presentation/views/sign_up_view.dart';
 import 'package:kutuku/features/Auth/presentation/views/widgets/custom_text_field.dart';
+import 'package:kutuku/features/products/views/home_products_view.dart';
 import '../../../../core/widgets/custom_bach_icon.dart';
 import '../../../../core/widgets/custom_button_with_icon.dart';
 import 'widgets/custom_password_text_field.dart';
@@ -34,14 +35,17 @@ class LoginViewBody extends StatelessWidget {
             VerticalSpace(value: 1),
             CustomBackIcon(),
             VerticalSpace(value: 4),
-            TextSection(title: 'Hello Again!', subTitle: 'Welcome Back You’ve Been Missed!',),
+            TextSection(
+              title: 'Hello Again!',
+              subTitle: 'Welcome Back You’ve Been Missed!',
+            ),
             VerticalSpace(value: 6),
             Text(
               "Email Address",
               style: TextStyle(fontSize: 16, fontWeight: FontWeight.w500),
             ),
             VerticalSpace(value: 1),
-            CustomTextField(hintText: 'Email',),
+            CustomTextField(hintText: 'Email'),
             VerticalSpace(value: 4),
             Text(
               "Password",
@@ -54,8 +58,8 @@ class LoginViewBody extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.end,
               children: [
                 GestureDetector(
-                  onTap: (){
-                    Get.to(()=>RecoveryPasswordView());
+                  onTap: () {
+                    Get.to(() => RecoveryPasswordView());
                   },
                   child: Text(
                     "Recovery Password",
@@ -70,7 +74,18 @@ class LoginViewBody extends StatelessWidget {
               ],
             ),
             VerticalSpace(value: 3),
-            CustomButton(text: "Sign In", width: SizeConfig.screenWidth!),
+            CustomButton(
+              onTap: () {
+                Get.to(
+                  () => HomeProductsView(),
+                  transition: Transition.rightToLeft,
+                  duration: Duration(milliseconds: 200),
+                  curve: Curves.easeIn,
+                );
+              },
+              text: "Sign In",
+              width: SizeConfig.screenWidth!,
+            ),
             VerticalSpace(value: 3),
             CustomButtonWithIcon(),
             VerticalSpace(value: 8),
@@ -87,8 +102,8 @@ class LoginViewBody extends StatelessWidget {
                   ),
                 ),
                 GestureDetector(
-                  onTap: (){
-                    Get.to(()=> SignUpView());
+                  onTap: () {
+                    Get.to(() => SignUpView());
                   },
                   child: Text(
                     " Sign Up for free",
