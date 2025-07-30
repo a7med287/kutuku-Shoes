@@ -5,7 +5,7 @@ class HomeProductsView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const Scaffold(
-      body: HomeProductsViewBody(),
+      body: SafeArea(child: HomeProductsViewBody()),
     );
   }
 }
