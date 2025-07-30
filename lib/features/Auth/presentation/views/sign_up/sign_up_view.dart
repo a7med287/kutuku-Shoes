@@ -53,23 +53,8 @@ class LoginViewBody extends StatelessWidget {
             ),
             VerticalSpace(value: 1),
             CustomPasswordTextField(),
-            VerticalSpace(value: 1),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.end,
-              children: [
-                Text(
-                  "Recovery Password",
-                  style: TextStyle(
-                    color: Color(0xff707B81),
-                    fontSize: 13,
-                    fontFamily: "AirbnbCereal_W_Bk",
-                    fontWeight: FontWeight.w400,
-                  ),
-                ),
-              ],
-            ),
-            VerticalSpace(value: 3),
-            CustomButton(text: "Login", width: SizeConfig.screenWidth!),
+            VerticalSpace(value: 4),
+            CustomButton(text: "Sign Up", width: SizeConfig.screenWidth!),
             VerticalSpace(value: 3),
             CustomButtonWithIcon(),
             VerticalSpace(value: 5),
