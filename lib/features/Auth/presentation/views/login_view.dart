@@ -3,12 +3,13 @@ import 'package:get/get.dart';
 import 'package:kutuku/core/utiles/size_config.dart';
 import 'package:kutuku/core/widgets/custom_button.dart';
 import 'package:kutuku/core/widgets/space_widget.dart';
-import 'package:kutuku/features/Auth/presentation/views/sign_up/sign_up_view.dart';
+import 'package:kutuku/features/Auth/presentation/views/recovery_password.dart';
+import 'package:kutuku/features/Auth/presentation/views/sign_up_view.dart';
 import 'package:kutuku/features/Auth/presentation/views/widgets/custom_text_field.dart';
-import '../../../../../core/widgets/custom_bach_icon.dart';
-import '../../../../../core/widgets/custom_button_with_icon.dart';
-import '../widgets/custom_password_text_field.dart';
-import '../widgets/text_section.dart';
+import '../../../../core/widgets/custom_bach_icon.dart';
+import '../../../../core/widgets/custom_button_with_icon.dart';
+import 'widgets/custom_password_text_field.dart';
+import 'widgets/text_section.dart';
 
 class LoginView extends StatelessWidget {
   const LoginView({super.key});
@@ -52,13 +53,18 @@ class LoginViewBody extends StatelessWidget {
             Row(
               mainAxisAlignment: MainAxisAlignment.end,
               children: [
-                Text(
-                  "Recovery Password",
-                  style: TextStyle(
-                    color: Color(0xff707B81),
-                    fontSize: 13,
-                    fontFamily: "AirbnbCereal_W_Bk",
-                    fontWeight: FontWeight.w400,
+                GestureDetector(
+                  onTap: (){
+                    Get.to(()=>RecoveryPasswordView());
+                  },
+                  child: Text(
+                    "Recovery Password",
+                    style: TextStyle(
+                      color: Color(0xff707B81),
+                      fontSize: 13,
+                      fontFamily: "AirbnbCereal_W_Bk",
+                      fontWeight: FontWeight.w400,
+                    ),
                   ),
                 ),
               ],

@@ -3,22 +3,22 @@ import 'package:kutuku/core/utiles/size_config.dart';
 import 'package:kutuku/core/widgets/custom_button.dart';
 import 'package:kutuku/core/widgets/space_widget.dart';
 import 'package:kutuku/features/Auth/presentation/views/widgets/custom_text_field.dart';
-import '../../../../../core/widgets/custom_bach_icon.dart';
-import '../../../../../core/widgets/custom_button_with_icon.dart';
-import '../widgets/custom_password_text_field.dart';
-import '../widgets/text_section.dart';
+import '../../../../core/widgets/custom_bach_icon.dart';
+import '../../../../core/widgets/custom_button_with_icon.dart';
+import 'widgets/custom_password_text_field.dart';
+import 'widgets/text_section.dart';
 
 class SignUpView extends StatelessWidget {
   const SignUpView({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(body: const SafeArea(child: LoginViewBody()));
+    return Scaffold(body: const SafeArea(child: SignUpViewBody()));
   }
 }
 
-class LoginViewBody extends StatelessWidget {
-  const LoginViewBody({super.key});
+class SignUpViewBody extends StatelessWidget {
+  const SignUpViewBody({super.key});
 
   @override
   Widget build(BuildContext context) {

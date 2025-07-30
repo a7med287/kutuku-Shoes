@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:kutuku/core/utiles/size_config.dart';
-import 'package:kutuku/features/Auth/presentation/views/Login/login_view.dart';
+import 'package:kutuku/features/Auth/presentation/views/login_view.dart';
 import '../../../../../core/widgets/custom_button.dart';
 import 'custom_dots_indicator.dart';
 import 'custom_page_view.dart';
